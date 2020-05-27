@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultiGesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-gu-GT3">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gNX-r6-Xfo" appends="YES" id="MgS-Ee-YrQ"/>
+                                    <outletCollection property="gestureRecognizers" destination="h6r-br-Hf9" appends="YES" id="jnJ-zs-m3R"/>
+                                    <outletCollection property="gestureRecognizers" destination="PCa-CJ-wUV" appends="YES" id="Cmq-gX-hbY"/>
+                                    <outletCollection property="gestureRecognizers" destination="dxt-ZI-q78" appends="YES" id="VXG-Hx-dPL"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageMonster" destination="cbf-gu-GT3" id="poQ-Hq-TGw"/>
+                        <outlet property="panGesture" destination="h6r-br-Hf9" id="BHK-Pk-xKB"/>
+                        <outlet property="pinchGesture" destination="dxt-ZI-q78" id="h7a-dh-q7o"/>
+                        <outlet property="rotateGesture" destination="PCa-CJ-wUV" id="tH6-x9-enC"/>
+                        <outlet property="tapGesture" destination="gNX-r6-Xfo" id="Lsb-b3-HkC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gNX-r6-Xfo">
+                    <connections>
+                        <action selector="tapMonster:" destination="BYZ-38-t0r" id="6Qb-ag-vC8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="h6r-br-Hf9">
+                    <connections>
+                        <action selector="panMonster:" destination="BYZ-38-t0r" id="p7b-dj-FFX"/>
+                    </connections>
+                </panGestureRecognizer>
+                <rotationGestureRecognizer id="PCa-CJ-wUV">
+                    <connections>
+                        <action selector="rotateMonster:" destination="BYZ-38-t0r" id="NyY-r4-0jP"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="dxt-ZI-q78">
+                    <connections>
+                        <action selector="pinchMonster:" destination="BYZ-38-t0r" id="Fx2-mx-64R"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="133" y="119"/>
+        </scene>
+    </scenes>
+</document>
